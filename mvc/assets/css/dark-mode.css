@@ -1,0 +1,73 @@
+/* Contenido para: mvc/assets/css/dark-mode.css (Corregido) */
+
+body.dark-mode {
+    background-color: #212529;
+    color: #f8f9fa; 
+}
+
+/* 1. Apuntamos a .login-container en lugar de .card */
+.dark-mode .login-container {
+    background-color: #343a40; /* Fondo oscuro para el form */
+    border-color: #495057;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8); /* Sombra más oscura */
+}
+
+/* 2. Arreglamos el texto del header del login */
+.dark-mode .login-header h2,
+.dark-mode .login-header p {
+    color: #f8f9fa;
+}
+
+/* 3. Arreglamos los inputs */
+.dark-mode .form-control {
+    background-color: #495057;
+    color: #f8f9fa;
+    border-color: #6c757d;
+}
+
+.dark-mode .form-control::placeholder {
+    color: #adb5bd;
+}
+
+/* 4. Arreglamos el cuadro amarillo de "Prueba" */
+.dark-mode .alert-warning {
+    background-color: #4d442a;
+    color: #ffeeba;
+    border-color: #665b3d;
+}
+
+.dark-mode .alert-warning code {
+    color: #fff;
+    background-color: #665b3d;
+}
+
+/* (Estos estilos de tabla servirán para las otras páginas) */
+.dark-mode .table {
+    color: #f8f9fa;
+}
+
+.dark-mode .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+
+
+
+/* Archivo: tawe2/mvc/assets/css/dark-mode.css (o tu CSS personalizado) */
+
+/* Alternativa con Patrón de Puntos o Ligeras Líneas */
+body {
+    background-color: #f8f9fa; /* Color base */
+    background-image: radial-gradient(#d3d9e0 0.5px, transparent 0.5px),
+                      radial-gradient(#d3d9e0 0.5px, #f8f9fa 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    min-height: 100vh;
+}
+
+/* El contenedor principal sigue siendo blanco para mantener la legibilidad */
+.container {
+    background-color: #ffffff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}

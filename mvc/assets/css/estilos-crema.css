@@ -1,0 +1,439 @@
+/*
+ * Estilos Crema Profesional - Sistema de Turismo La Paz
+ * Paleta de colores crema suave aplicada globalmente
+ */
+
+/* Variables de colores - Modo Claro (por defecto) */
+:root {
+    --cream-light: #FAF8F3;
+    --cream-medium: #F5F0E8;
+    --cream-dark: #E8DCC8;
+    --cream-card: #FFFFFF;
+    --accent-gold: #D4AF37;
+    --accent-gold-light: #E8C866;
+    --accent-brown: #8B7355;
+    --text-primary: #3E2723;
+    --text-secondary: #5D4E37;
+    --border-color: #D4C5B0;
+}
+
+/* Variables de colores - Modo Oscuro */
+body.dark-mode {
+    --cream-light: #2C2419;
+    --cream-medium: #3D3227;
+    --cream-dark: #4A3F2F;
+    --cream-card: #5A4D3B;
+    --accent-gold: #D4AF37;
+    --accent-gold-light: #E8C866;
+    --accent-brown: #8B7355;
+    --text-primary: #F5EFE6;
+    --text-secondary: #D4C5B0;
+    --border-color: #6B5D4F;
+}
+
+/* Fondo global con degradado oscuro */
+body {
+    background: linear-gradient(135deg, var(--cream-light) 0%, var(--cream-medium) 100%) !important;
+    background-attachment: fixed !important;
+    color: var(--text-primary) !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: transparent;
+}
+
+/* Tarjetas y paneles */
+.card {
+    background: var(--cream-card);
+    border: 2px solid var(--border-color);
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+}
+
+.card:hover {
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+    transform: translateY(-2px);
+    border-color: var(--accent-gold);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--cream-dark) 0%, var(--cream-medium) 100%);
+    border-bottom: 2px solid var(--border-color);
+    color: var(--accent-gold);
+    font-weight: 700;
+}
+
+.card-body {
+    background-color: var(--cream-card);
+    color: var(--text-primary);
+}
+
+/* Tablas */
+.table {
+    background-color: var(--cream-card);
+    border-radius: 1rem;
+    overflow: hidden;
+    color: var(--text-primary);
+}
+
+.table thead {
+    background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-brown) 100%);
+    color: var(--cream-light);
+}
+
+.table thead th {
+    border: none;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.table tbody tr {
+    background-color: var(--cream-card);
+    transition: background-color 0.3s ease;
+    color: var(--text-primary);
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: var(--cream-dark);
+}
+
+.table tbody tr:hover {
+    background-color: var(--cream-medium);
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.2);
+}
+
+.table tbody td {
+    padding: 0.9rem;
+    vertical-align: middle;
+    border-color: var(--border-color);
+}
+
+/* Botones principales */
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-brown) 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(212, 175, 55, 0.4);
+    background: linear-gradient(135deg, var(--accent-brown) 0%, var(--accent-gold) 100%);
+}
+
+/* Botón secundario */
+.btn-secondary {
+    background-color: var(--cream-dark);
+    color: var(--text-primary);
+    border: 2px solid var(--accent-brown);
+    border-radius: 50px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-brown);
+    color: white;
+}
+
+/* Botón success */
+.btn-success {
+    background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(76, 175, 80, 0.4);
+}
+
+/* Botón danger */
+.btn-danger {
+    background: linear-gradient(135deg, #f44336 0%, #c62828 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(244, 67, 54, 0.3);
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(244, 67, 54, 0.4);
+}
+
+/* Botón warning */
+.btn-warning {
+    background: linear-gradient(135deg, var(--accent-gold) 0%, #FFA726 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+}
+
+.btn-warning:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Formularios */
+.form-control, .form-select {
+    border: 2px solid var(--border-color);
+    border-radius: 0.8rem;
+    padding: 0.8rem 1rem;
+    background-color: var(--cream-dark);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--accent-gold);
+    background-color: var(--cream-card);
+    box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.3);
+    outline: none;
+    color: var(--text-primary);
+}
+
+.form-control::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+.form-label {
+    color: var(--accent-gold-light);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Alerts */
+.alert {
+    border-radius: 1rem;
+    border: 2px solid;
+    padding: 1rem 1.5rem;
+}
+
+.alert-success {
+    background-color: #E8F5E9;
+    border-color: #4CAF50;
+    color: #2E7D32;
+}
+
+.alert-danger {
+    background-color: #FFEBEE;
+    border-color: #f44336;
+    color: #C62828;
+}
+
+.alert-warning {
+    background-color: #FFF8E1;
+    border-color: var(--accent-gold);
+    color: var(--accent-brown);
+}
+
+.alert-info {
+    background-color: #E3F2FD;
+    border-color: #2196F3;
+    color: #1565C0;
+}
+
+/* Badges */
+.badge {
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+}
+
+.badge-primary {
+    background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-brown) 100%);
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--accent-gold-light);
+}
+
+.page-title {
+    color: var(--accent-gold);
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-gold-light) 100%);
+    border-radius: 2px;
+}
+
+/* Navbar si existe */
+.navbar {
+    background: linear-gradient(135deg, var(--cream-medium) 0%, var(--cream-dark) 100%);
+    border-bottom: 3px solid var(--accent-gold);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-brand {
+    color: var(--accent-gold);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-brand:hover {
+    color: var(--accent-gold-light);
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-gold);
+}
+
+/* Paginación si existe */
+.pagination .page-link {
+    background-color: var(--cream-card);
+    border: 2px solid var(--border-color);
+    color: var(--text-primary);
+    margin: 0 0.2rem;
+    border-radius: 0.5rem;
+}
+
+.pagination .page-link:hover {
+    background-color: var(--cream-dark);
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+.pagination .page-item.active .page-link {
+    background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-brown) 100%);
+    border-color: var(--accent-gold);
+    color: var(--cream-light);
+}
+
+/* Breadcrumbs si existe */
+.breadcrumb {
+    background-color: var(--cream-dark);
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+.breadcrumb-item a {
+    color: var(--accent-gold);
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--accent-gold-light);
+}
+
+.breadcrumb-item.active {
+    color: var(--text-secondary);
+}
+
+/* Modales si existen */
+.modal-content {
+    background-color: var(--cream-card);
+    border: 3px solid var(--border-color);
+    border-radius: 1.5rem;
+    color: var(--text-primary);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--cream-dark) 0%, var(--cream-medium) 100%);
+    border-bottom: 2px solid var(--border-color);
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.modal-title {
+    color: var(--accent-gold);
+    font-weight: 700;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cream-medium);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--accent-gold) 0%, var(--accent-brown) 100%);
+    border-radius: 10px;
+    border: 2px solid var(--cream-medium);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--accent-gold-light) 0%, var(--accent-gold) 100%);
+}
+
+/* Links */
+a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-gold-light);
+}
+
+/* HR decorativo */
+hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, var(--border-color) 50%, transparent 100%);
+    margin: 2rem 0;
+}
+
+/* Sombras suaves para elementos flotantes */
+.shadow-cream {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.shadow-cream-lg {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Badges oscuros */
+.badge {
+    color: var(--cream-light);
+}
+
+/* Text muted oscuro */
+.text-muted {
+    color: var(--text-secondary) !important;
+}
